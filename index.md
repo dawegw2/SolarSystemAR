@@ -2,4 +2,4 @@ Test Page
 
 ## Hello, Welcome.
 
-Visit the AR page [here](index.html)
+Visit the AR page [here](site.html)
