@@ -13,7 +13,11 @@
                 
                 <a-marker id="custom-1" type="pattern" url="assets/pattern-mars-symbol.patt">
                     
-                    <a-entity gltf-model="#my-planet">
+                    <a-entity obj-model="obj: #my-obj; mtl: #my-mtl" scale="0.025 0.025 0.025">
+                        <a-animation attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite" easing="linear"></a-animation>
+                    </a-entity>
+                    
+                    <a-entity gltf-model="#tree" position="-0.9 0 0" scale="0.1 0.1 0.1">
                         <a-animation attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite" easing="linear"></a-animation>
                     </a-entity>
 
