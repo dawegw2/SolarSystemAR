@@ -9,6 +9,7 @@
                     <a-asset-item id="my-obj" src="untitled.obj"></a-asset-item>
                     <a-asset-item id="my-mtl" src="untitled.mtl"></a-asset-item>
                     <a-asset-item id="my-planet" src="models/scene.gltf"></a-asset-item>
+                    <a-asset-item id="tex" src="models/textures/Material.002_diffuse.jpeg"></a-asset-item>
                 </a-assets>
                 
                 <a-marker id="custom-1" type="pattern" url="assets/pattern-mars-symbol.patt">
@@ -21,7 +22,7 @@
                         <a-animation attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite" easing="linear"></a-animation>
                     </a-entity>
 
-                    <a-sphere position='0.9 0.5 0' color='green' scale="0.2 0.2 0.2"></a-sphere>
+                    <a-sphere material="src: #tex" position='0.9 0.5 0' color='green' scale="0.2 0.2 0.2"></a-sphere>
                 
                 </a-marker>
 
