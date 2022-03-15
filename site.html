@@ -8,6 +8,7 @@
                     <a-asset-item id="tree" src="tree.gltf"></a-asset-item>
                     <a-asset-item id="my-obj" src="untitled.obj"></a-asset-item>
                     <a-asset-item id="my-mtl" src="untitled.mtl"></a-asset-item>
+                    <a-asset-item id="my-planet" src="models/scene.gltf"></a-asset-item>
                 </a-assets>
                 
                 <a-marker id="custom-1" type="pattern" url="assets/pattern-mars-symbol.patt">
@@ -15,13 +16,11 @@
                     <a-entity obj-model="obj: #my-obj; mtl: #my-mtl" scale="0.025 0.025 0.025">
                         <a-animation attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite" easing="linear"></a-animation>
                     </a-entity>
-    
-                    <a-entity  position="-0.9 0 0" 
-                    rotation="0 0 0"
-                    scale="0.10 0.10 0.10"
-                    gltf-model="#tree" >
+                    
+                    <a-entity gltf-model="#my-planet" position="-0.9 0 0" scale="0.10 0.10 0.10:">
+                        <a-animation attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite" easing="linear"></a-animation>
                     </a-entity>
-    
+
                     <a-sphere position='0.9 0.5 0' color='green' scale="0.2 0.2 0.2"></a-sphere>
                 
                 </a-marker>
