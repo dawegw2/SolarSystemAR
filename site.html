@@ -28,10 +28,10 @@
         
         <a-entity gltf-model="#tree" scale="0.1 0.1 0.1"  position="10 0 0" rotation="90 0 0" gps-entity-place="latitude: 43.740359; longitude: -79.599321"></a-entity>
 
-        <a-text value="hello, what's up." scale="75 75 75" rotation="90 0 0" gps-entity-place="latitude: 43.740359; longitude: -79.599321"></a-text>
+        <!--<a-text value="hello, what's up." look-at="[gps-camera]" scale="75 75 75" rotation="90 0 0" gps-entity-place="latitude: 43.740359; longitude: -79.599321"></a-text>-->
 		
         <a-sphere color="yellow" scale="0.6 0.6 0.6" position="5 0 0" gps-projected-entity-place="latitude: 43.740359; longitude: -79.599321"/>
-       
+        <a-animation attribute="rotation" dur="2000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
         </a-scene>
 	</body>
 </html>
