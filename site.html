@@ -1,38 +1,37 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
-    <head>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+		<script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+		<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+		<script>
+			THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+		</script>
+	</head>
 
-        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+	<body style="margin: 0; overflow: hidden;">
+		<a-scene 
+		vr-mode-ui="enabled: false"
+        	arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+        	renderer="antialias: true; alpha: true">
+		
+		<!-- we dont have camera, assets, items, etc. in here yet -->
+        <a-assets>
+            <a-asset-item id="tree" src="assets/tree.gltf"></a-asset-item>
+        </a-assets>
+       
+        <a-entity gltf-model="#tree"  look-at="[gps-camera]" scale="0.2 0.2 0.2" gps-entity-place="latitude: 43.740359; longitude: -79.599321" animation-mixer></a-entity>
 
-    </head>
-   
-        <body style='margin : 0px; overflow: hidden;'>
-            <a-scene embedded arjs='sourceType: webcam;'>
-                <a-assets>
-                    <a-asset-item id="tree" src="tree.gltf"></a-asset-item>
-                    <a-asset-item id="my-obj" src="untitled.obj"></a-asset-item>
-                    <a-asset-item id="my-mtl" src="untitled.mtl"></a-asset-item>
-                    <a-asset-item id="my-planet" src="mars2.obj"></a-asset-item>
-                    <a-asset-item id="my-tex" src="mars2.mtl"></a-asset-item>
-                </a-assets>
-                
-                <a-marker id="custom-1" type="pattern" url="assets/pattern-mars-symbol.patt">
-                    
-                    <a-entity obj-model="obj: #my-planet; mtl: #my-tex" scale="0.5 0.5 0.5">
-                        <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
-                    </a-entity>
-                    
-                    <!--<a-entity gltf-model="#tree" position="-0.9 0 0" scale="0.1 0.1 0.1"></a-entity>-->
-
-                    <!--<a-sphere position='0.9 0.5 0' color='green' scale="0.2 0.2 0.2"></a-sphere>-->
-                
-                </a-marker>
-
-                <a-entity camera></a-entity>
-
-                <!--<a-marker-camera preset='hiro'></a-marker-camera> -->
-
-            </a-scene>
-        </body>
+        <a-text value="hello, what's up." rotation="90 0 0" look-at="[gps-camera]" scale="75 75 75"  gps-entity-place="latitude: 43.740359; longitude: -79.599321"></a-text>
+		
+        <a-sphere color="yellow" look-at="[gps-camera]" scale="0.6 0.6 0.6" position="5 0 0" gps-projected-entity-place="latitude: 43.740359; longitude: -79.599321"/>
+		
+        <a-camera gps-camera='simulateLatitude: 43.740359; simulateLongitude: -79.599321' rotation-reader></a-camera>
+        
+        </a-scene>
+	</body>
 </html>
