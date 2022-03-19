@@ -23,15 +23,15 @@
         <a-assets>
             <a-asset-item id="tree" src="assets/tree.gltf"></a-asset-item>
         </a-assets>
-       
+        
+        <a-camera gps-camera='simulateLatitude: 43.740359; simulateLongitude: -79.599321' rotation-reader></a-camera>
+        
         <a-entity gltf-model="#tree"  look-at="[gps-camera]" scale="0.2 0.2 0.2" gps-entity-place="latitude: 43.740359; longitude: -79.599321" animation-mixer></a-entity>
 
         <a-text value="hello, what's up." rotation="90 0 0" look-at="[gps-camera]" scale="75 75 75"  gps-entity-place="latitude: 43.740359; longitude: -79.599321"></a-text>
 		
         <a-sphere color="yellow" look-at="[gps-camera]" scale="0.6 0.6 0.6" position="5 0 0" gps-projected-entity-place="latitude: 43.740359; longitude: -79.599321"/>
-		
-        <a-camera gps-camera='simulateLatitude: 43.740359; simulateLongitude: -79.599321' rotation-reader></a-camera>
-        
+       
         </a-scene>
 	</body>
 </html>
