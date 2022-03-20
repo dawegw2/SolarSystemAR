@@ -24,8 +24,10 @@
             <a-asset-item id="scene" src="assets/scene.gltf"></a-asset-item>
         </a-assets>
         
-        <a-camera gps-camera rotation-reader></a-camera>
+        <a-camera gps-camera="simulateLatitude: 51.049; simulateLongitude: -0.723" rotation-reader></a-camera>
         
+		<a-text value="This will always face the user." look-at="[gps-camera]" scale="75 75 75" gps-entity-place="latitude: 51.0491; longitude: -0.723;"></a-text>
+		
 		<a-entity animation-mixer="loop: repeat" gltf-model="#scene" position="80 0 100 " scale="0.2 0.1 0.1" rotation="0 0 0" gps-entity-place="latitude: 43.772507; longitude: -79.502690"></a-entity>
 
 		<a-entity animation-mixer="loop: repeat" gltf-model="#scene" position="50 15 80" scale="0.2 0.1 0.1" rotation="0 0 0" gps-entity-place="latitude: 43.772507; longitude: -79.502690"></a-entity>
