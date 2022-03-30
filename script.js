@@ -26,7 +26,7 @@ var models = [
     },
     {
         url: 'assets/models/venus.gltf',
-        scale: '0.6 0.6 0.6',
+        scale: '0.5 0.5 0.5',
         info: 'Venus',
     },
     {
@@ -74,6 +74,7 @@ function renderPlaces(places) {
             setModel(models[newIndex], entity);
         });
 
+        scene.appendChild(marker);    
         marker.appendChild(model);        
     });
 }
