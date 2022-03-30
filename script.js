@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '﹖';
+    button.innerText = 'change';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -79,7 +79,12 @@ function renderPlaces(places) {
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
             var entity = document.querySelector('[gps-entity-place]');
-            modelIndex++;
+            if (modelIndex == 0) {
+                modelIndex = 3;
+            } else {
+                modelIndex--;
+            }
+            //modelIndex++;
             var newIndex = modelIndex % models.length;
             setModel(models[newIndex], entity);
         });
