@@ -52,25 +52,28 @@ var setModel = function (model, entity) {
     div.innerText = model.info;
 };
 
-function renderPlaces() {
+function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
     let marker = document.querySelector('a-marker');
 
+    places.forEach((place) => {
+        let latitude = place.location.lat;
+        let longitude = place.location.lng;
 
-    let model = document.createElement('a-entity');
-    //model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+        let model = document.createElement('a-entity');
+        //model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
-    setModel(models[modelIndex], model);
+        setModel(models[modelIndex], model);
 
-    model.setAttribute('animation-mixer', '');
+        model.setAttribute('animation-mixer', '');
 
-    marker.appendChild(model);        
+        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
+            var entity = document.querySelector('[gps-entity-place]');
+            modelIndex++;
+            var newIndex = modelIndex % models.length;
+            setModel(models[newIndex], entity);
+        });
+
+        marker.appendChild(model);        
+    });
 }
-
-document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-    renderPlaces(places);
-    var entity = document.querySelector('[gps-entity-place]');
-    modelIndex++;
-    var newIndex = modelIndex % models.length; 
-    setModel(models[newIndex], entity);
-});
