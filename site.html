@@ -14,20 +14,16 @@
             <a-assets>
                 <a-asset-item id="mars-planet" src="assets/models/mars.obj"></a-asset-item>
                 <a-asset-item id="mars-mtl" src="assets/models/mars.mtl"></a-asset-item>
-                <a-asset-item id="earth" src="assets/models/earth.gltf"></a-asset-item>
+               
                 <a-asset-item id="mercury" src="assets/models/mercury.gltf"></a-asset-item>
                 <a-asset-item id="venus" src="assets/models/venus.gltf"></a-asset-item>
+                <a-asset-item id="earth" src="assets/models/earth.gltf"></a-asset-item>
+                <a-asset-item id="mars" src="assets/models/mars.gltf"></a-asset-item>
             </a-assets>
             
             <a-marker type="pattern" url="assets/markers/pattern-mars-symbol.patt">
                 <!-- MARS
                 <a-entity obj-model="obj: #mars-planet; mtl: #mars-mtl" scale="0.5 0.5 0.5">
-                    <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
-                </a-entity>
-                -->
-
-                <!-- EARTH
-                <a-entity gltf-model="#earth" scale="0.5 0.5 0.5">
                     <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
                 </a-entity>
                 -->
@@ -38,8 +34,20 @@
                 </a-entity>
                 -->
 
-                <!-- VENUS -->
+                <!-- VENUS 
                 <a-entity gltf-model="#venus" scale="0.5 0.5 0.5">
+                    <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+                -->
+
+                <!-- EARTH
+                <a-entity gltf-model="#earth" scale="0.5 0.5 0.5">
+                    <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+                -->
+
+                <!-- MARS -->
+                <a-entity gltf-model="#mars" scale="0.5 0.5 0.5">
                     <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
                 </a-entity>
                     
