@@ -23,18 +23,15 @@ var models = [
         url: 'assets/models/mercury.gltf',
         scale: '0.5 0.5 0.5',
         info: 'Mercury',
-        rotation: '0 180 0',
     },
     {
         url: 'assets/models/venus.gltf',
-        scale: '0.5 0.5 0.5',
-        rotation: '0 180 0',
+        scale: '0.6 0.6 0.6',
         info: 'Venus',
     },
     {
         url: 'assets/models/earth.gltf',
         scale: '0.5 0.5 0.5',
-        rotation: '0 180 0',
         info: 'Earth',
     },
 ];
@@ -43,10 +40,6 @@ var modelIndex = 0;
 var setModel = function (model, entity) {
     if (model.scale) {
         entity.setAttribute('scale', model.scale);
-    }
-
-    if (model.rotation) {
-        entity.setAttribute('rotation', model.rotation);
     }
 
     if (model.position) {
