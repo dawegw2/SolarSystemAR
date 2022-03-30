@@ -22,6 +22,7 @@
                 <a-asset-item id="jupiter" src="assets/models/jupiter.gltf"></a-asset-item>
                 <a-asset-item id="saturn" src="assets/models/saturn.gltf"></a-asset-item>
                 <a-asset-item id="uranus" src="assets/models/uranus.gltf"></a-asset-item>
+                <a-asset-item id="neptune" src="assets/models/neptune.gltf"></a-asset-item>
             </a-assets>
             
             <a-marker type="pattern" url="assets/markers/pattern-mars-symbol.patt">
@@ -67,13 +68,17 @@
                 </a-entity>
                 -->
 
-                <!-- URANUS -->
+                <!-- URANUS 
                 <a-entity gltf-model="#uranus" scale="0.5 0.5 0.5">
                     <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
                 </a-entity>
-                
-                
-                    
+                -->
+
+                <!-- NEPTUNE -->
+                <a-entity gltf-model="#neptune" scale="0.5 0.5 0.5">
+                    <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+                </a-entity>
+
                 <a-text width="3" height="3" value="Mars is a dusty, cold, desert world with a very thin atmosphere. It's the fourth planet from the Sun" color="orange" position="0.90 0 0" rotation="-90 0 0"></a-text>
             </a-marker>
 
