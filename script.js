@@ -78,10 +78,10 @@ function renderPlaces() {
     model.appendChild(anim);
 
     document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-        //var entity = document.querySelector('[gps-entity-place]');
+        var entity;
         modelIndex++;
         var newIndex = modelIndex % models.length;
-        setModel(models[newIndex]);
+        setModel(models[newIndex], entity);
     });
 
     scene.appendChild(marker);    
