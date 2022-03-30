@@ -3,7 +3,7 @@ window.onload = () => {
     button.innerText = '﹖';
 
     let places = staticLoadPlaces();
-    renderPlaces(places);
+    renderPlaces();
 };
 
 function staticLoadPlaces() {
@@ -52,39 +52,38 @@ var setModel = function (model, entity) {
     div.innerText = model.info;
 };
 
-function renderPlaces(places) {
+function renderPlaces() {
     let scene = document.querySelector('a-scene');
     let marker = document.querySelector('a-marker');
 
-    places.forEach((place) => {
-        let latitude = place.location.lat;
-        let longitude = place.location.lng;
+    
+    let latitude = place.location.lat;
+    let longitude = place.location.lng;
 
-        let model = document.createElement('a-entity');
-        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+    let model = document.createElement('a-entity');
+    model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
-        setModel(models[modelIndex], model);
+    setModel(models[modelIndex], model);
 
-        model.setAttribute('animation-mixer', '');
+    model.setAttribute('animation-mixer', '');
 
-        let anim = document.createElement('a-animation');
+    let anim = document.createElement('a-animation');
 
-        anim.setAttribute('attribute', 'rotation');
-        anim.setAttribute('dur', '10000');
-        anim.setAttribute('to', '0 360 0');
-        anim.setAttribute('repeat', 'indefinite');
-        anim.setAttribute('easing', 'linear');
+    anim.setAttribute('attribute', 'rotation');
+    anim.setAttribute('dur', '10000');
+    anim.setAttribute('to', '0 360 0');
+    anim.setAttribute('repeat', 'indefinite');
+    anim.setAttribute('easing', 'linear');
 
-        model.appendChild(anim);
+    model.appendChild(anim);
 
-        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('[gps-entity-place]');
-            modelIndex++;
-            var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], entity);
-        });
-
-        scene.appendChild(marker);    
-        marker.appendChild(model);        
+    document.querySelector('button[data-action="change"]').addEventListener('click', function () {
+        var entity = document.querySelector('[gps-entity-place]');
+        modelIndex++;
+        var newIndex = modelIndex % models.length;
+        setModel(models[newIndex], entity);
     });
+
+    scene.appendChild(marker);    
+    marker.appendChild(model);        
 }
