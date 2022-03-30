@@ -57,15 +57,15 @@ function renderPlaces() {
     let marker = document.querySelector('a-marker');
 
     
-    let latitude = place.location.lat;
-    let longitude = place.location.lng;
+    //let latitude = place.location.lat;
+    //let longitude = place.location.lng;
 
     let model = document.createElement('a-entity');
-    model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+    //model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
     setModel(models[modelIndex], model);
 
-    model.setAttribute('animation-mixer', '');
+    //model.setAttribute('animation-mixer', '');
 
     let anim = document.createElement('a-animation');
 
@@ -78,10 +78,10 @@ function renderPlaces() {
     model.appendChild(anim);
 
     document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-        var entity = document.querySelector('[gps-entity-place]');
+        //var entity = document.querySelector('[gps-entity-place]');
         modelIndex++;
         var newIndex = modelIndex % models.length;
-        setModel(models[newIndex], entity);
+        setModel(models[newIndex]);
     });
 
     scene.appendChild(marker);    
