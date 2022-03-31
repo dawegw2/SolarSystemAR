@@ -1,3 +1,16 @@
+.centered{
+    height: 20%;
+    justify-content: center;
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 1px auto;
+    left: 0px;
+    right: 0px;
+}
+
 .left{
     height: 20%;
     justify-content: center;
@@ -7,8 +20,8 @@
     flex-direction: row;
     width: 100%;
     margin: 1px auto;
-    left: -15px;
-    right: -15px;
+    left: -100px;
+    right: -100px;
 }
 
 .right{
@@ -20,8 +33,8 @@
     flex-direction: row;
     width: 100%;
     margin: 0px auto;
-    left: 15px;
-    right: 15px;
+    left: 100px;
+    right: 100px;
 }
 
 button {
