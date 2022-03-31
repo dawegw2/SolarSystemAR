@@ -2,6 +2,9 @@ window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '<';
 
+    const button2 = document.querySelector('button[data-action="change2"]');
+    button2.innerText = '>';
+
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
@@ -85,6 +88,15 @@ function renderPlaces(places) {
                 modelIndex--;
             }
             //modelIndex++;
+            var newIndex = modelIndex % models.length;
+            setModel(models[newIndex], entity);
+        });
+
+
+        document.querySelector('button[data-action="change2"]').addEventListener('click', function () {
+            var entity = document.querySelector('[gps-entity-place]');
+           
+            modelIndex++;
             var newIndex = modelIndex % models.length;
             setModel(models[newIndex], entity);
         });
