@@ -106,7 +106,7 @@ function renderPlaces(places) {
         model.appendChild(anim);
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('animation-mixer');
+            var entity = document.querySelector('gps-entity-place');
            //if (modelIndex == 0) {
                 //modelIndex = 7;
             //} else {
@@ -114,7 +114,7 @@ function renderPlaces(places) {
             //}
             modelIndex++;
             var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], entity);
+            setModel(models[newIndex], model);
         });
 
         scene.appendChild(marker);    
