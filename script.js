@@ -5,6 +5,9 @@ window.onload = () => {
     //const button2 = document.querySelector('button[data-action="change2"]');
     //button2.innerText = '>';
 
+    const button_hide = document.querySelector('button[class="hide"]');
+    button_hide.innerText = 'hide';
+
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
@@ -74,7 +77,7 @@ var models = [
 ];
 
 var modelIndex = 0;
-var setModel = function (model, entity) {
+var setModel = function (model, entity, desc) {
     if (model.scale) {
         entity.setAttribute('scale', model.scale);
     }
@@ -90,6 +93,11 @@ var setModel = function (model, entity) {
     description.setAttribute('value', model.value) // set planet description
     description.setAttribute('position', model.position) // set text position 
 
+    if (desc == true) {
+        description.setAttribute('value', model.value)
+    } else {
+        description.setAttribute('value', '')
+    }
     const div = document.querySelector('.instructions');
     div.innerText = model.name;
 };
@@ -133,6 +141,16 @@ function renderPlaces(places) {
 
         scene.appendChild(marker);    
         marker.appendChild(model);        
+    });
+
+    document.querySelector('button[class="hide"]').addEventListener('click', function () {
+        if (desc == true) {
+            desc = false;
+        } else {
+            desc = true; 
+        }
+        var newIndex = modelIndex % models.length;
+        setModel(models[newIndex], desc);
     });
 }
 
