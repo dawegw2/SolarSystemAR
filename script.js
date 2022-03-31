@@ -48,7 +48,7 @@ var setModel = function (model, entity) {
 
     entity.setAttribute('gltf-model', model.url);
 
-    const div = document.querySelector('.description');
+    const div = document.querySelector('.instructions');
     div.innerText = model.info;
 };
 
@@ -78,7 +78,7 @@ function renderPlaces(places) {
         model.appendChild(anim);
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('');
+            var entity = document.querySelector('[gps-entity-place]');
             if (modelIndex == 0) {
                 modelIndex = 3;
             } else {
