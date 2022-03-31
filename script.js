@@ -26,42 +26,50 @@ var models = [
         url: 'assets/models/mercury.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Mercury',
+        value: 'yo',
     },
     {
         url: 'assets/models/venus.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Venus',
+        value: 'venus',
     },
     {
         url: 'assets/models/earth.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Earth',
+        value: 'test',
     },
     {
         url: 'assets/models/mars.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Mars',
         value: "Mars is a dusty, cold, desert world with a very thin atmosphere. It's the fourth planet from the Sun",
+        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/jupiter.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Jupiter',
+        value: 'wow',
     },
     {
         url: 'assets/models/saturn.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Saturn',
+        value: 'cool',
     },
     {
         url: 'assets/models/uranus.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Uranus',
+        value: 'yes',
     },
     {
         url: 'assets/models/neptune.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Neptune',
+        value: 'no',
     },
 ];
 
@@ -77,13 +85,18 @@ var setModel = function (model, entity) {
 
     entity.setAttribute('gltf-model', model.url);
 
+    
+    let description = document.querySelector('a-text')
+
+    description.setAttribute('value', model.value)
+
     const div = document.querySelector('.instructions');
     div.innerText = model.name;
 };
 
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
-    let marker = document.querySelector('a-marker');
+    let marker = document.querySelector('a-marker')
 
     places.forEach(() => {
         //let latitude = place.location.lat;
@@ -107,7 +120,7 @@ function renderPlaces(places) {
         model.appendChild(anim);
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('gps-entity-place');
+            //var entity = document.querySelector('gps-entity-place');
            //if (modelIndex == 0) {
                 //modelIndex = 7;
             //} else {
