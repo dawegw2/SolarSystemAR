@@ -41,6 +41,7 @@ var models = [
         url: 'assets/models/mars.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Mars',
+        value: "Mars is a dusty, cold, desert world with a very thin atmosphere. It's the fourth planet from the Sun",
     },
     {
         url: 'assets/models/jupiter.gltf',
