@@ -106,7 +106,7 @@ function renderPlaces(places) {
         model.appendChild(anim);
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('[gps-entity-place]');
+            var entity = document.querySelector('a-entity');
            //if (modelIndex == 0) {
                 //modelIndex = 7;
             //} else {
