@@ -77,6 +77,7 @@ var models = [
 ];
 
 var modelIndex = 0;
+var modelDesc = true;
 var setModel = function (model, entity, desc) {
     if (model.scale) {
         entity.setAttribute('scale', model.scale);
@@ -144,13 +145,13 @@ function renderPlaces(places) {
     });
 
     document.querySelector('button[class="hide"]').addEventListener('click', function () {
-        if (desc == true) {
-            desc = false;
+        if (modelDesc == true) {
+            modelDesc = false;
         } else {
-            desc = true; 
+            modelDesc = true; 
         }
         var newIndex = modelIndex % models.length;
-        setModel(models[newIndex], desc);
+        setModel(models[newIndex], modelDesc);
     });
 }
 
