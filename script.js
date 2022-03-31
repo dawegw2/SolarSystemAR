@@ -26,25 +26,25 @@ var models = [
         url: 'assets/models/mercury.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Mercury',
-        value: 'yo',
+        value: "Mercury is the closest planet from the Sun and the smallest planet in our solar system. It's a rocky planet with a solid surface and a thin atmosphere.",
     },
     {
         url: 'assets/models/venus.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Venus',
-        value: 'venus',
+        value: 'Venus is the second closest planet from the Sun. It has a toxic atmosphere and a very hot surface.',
     },
     {
         url: 'assets/models/earth.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Earth',
-        value: 'test',
+        value: 'Earth is the third planet that orbits the Sun. ',
     },
     {
         url: 'assets/models/mars.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Mars',
-        value: "Mars is a dusty, cold, desert world with a very thin atmosphere. It's the fourth planet from the Sun",
+        value: "Mars is the fourth planet from the Sun. It's a dusty, cold, desert world with a very thin atmosphere. ",
     },
     {
         url: 'assets/models/jupiter.gltf',
@@ -105,11 +105,7 @@ function renderPlaces(places) {
     let marker = document.querySelector('a-marker')
 
     places.forEach(() => {
-        //let latitude = place.location.lat;
-        //let longitude = place.location.lng;
-
         let model = document.createElement('a-entity');
-        //model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
         setModel(models[modelIndex], model);
 
@@ -126,7 +122,6 @@ function renderPlaces(places) {
         model.appendChild(anim);
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            //var entity = document.querySelector('gps-entity-place');
            //if (modelIndex == 0) {
                 //modelIndex = 7;
             //} else {
