@@ -10,10 +10,14 @@
         <title>AR Project Site</title>
     </head>
 
-    <body style='margin : 0px; overflow: hidden;'>
+    <body style='margin : 0px; overflow: hidden;'> 
         <div class="planet name"></div>
         
-        <a-scene embedded arjs='sourceType: webcam;'>
+        <a-scene arjs="sourceType: webcam; debugUIEnabled: false;"
+		embedded
+		renderer="logarithmicDepthBuffer: true;"
+		vr-mode-ui="enabled: false"
+		id="scene">
             
             <a-assets>
                 <!-- textures from https://www.solarsystemscope.com/textures/-->
@@ -85,7 +89,7 @@
                 </a-entity>
                 -->
 
-                <a-text width="2" height="2" value="Mars is a dusty, cold, desert world with a very thin atmosphere. It's the fourth planet from the Sun" color="orange" position="-0.90 0 0.90" rotation="-90 0 0"></a-text>
+                <a-text id="desc" width="2" height="2" value="Mars is a dusty, cold, desert world with a very thin atmosphere. It's the fourth planet from the Sun" color="orange" position="-0.90 0 0.90" rotation="-90 0 0"></a-text>
             </a-marker>
 
             <a-entity camera></a-entity>
