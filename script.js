@@ -45,7 +45,6 @@ var models = [
         scale: '0.5 0.5 0.5',
         name: 'Mars',
         value: "Mars is a dusty, cold, desert world with a very thin atmosphere. It's the fourth planet from the Sun",
-        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/jupiter.gltf',
@@ -58,6 +57,7 @@ var models = [
         scale: '0.5 0.5 0.5',
         name: 'Saturn',
         value: 'cool',
+        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/uranus.gltf',
@@ -79,16 +79,16 @@ var setModel = function (model, entity) {
         entity.setAttribute('scale', model.scale);
     }
 
-    if (model.position) {
-        entity.setAttribute('position', model.position);
-    }
+    //if (model.position) {
+        //entity.setAttribute('position', model.position);
+    //}
 
     entity.setAttribute('gltf-model', model.url);
-
     
     let description = document.querySelector('a-text')
 
-    description.setAttribute('value', model.value)
+    description.setAttribute('value', model.value) // set planet description
+    description.setAttribute('position', model.position) // set text position 
 
     const div = document.querySelector('.instructions');
     div.innerText = model.name;
