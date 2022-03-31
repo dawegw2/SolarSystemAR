@@ -25,17 +25,42 @@ var models = [
     {
         url: 'assets/models/mercury.gltf',
         scale: '0.5 0.5 0.5',
-        info: 'Mercury',
+        name: 'Mercury',
     },
     {
         url: 'assets/models/venus.gltf',
         scale: '0.5 0.5 0.5',
-        info: 'Venus',
+        name: 'Venus',
     },
     {
         url: 'assets/models/earth.gltf',
         scale: '0.5 0.5 0.5',
-        info: 'Earth',
+        name: 'Earth',
+    },
+    {
+        url: 'assets/models/mars.gltf',
+        scale: '0.5 0.5 0.5',
+        name: 'Mars',
+    },
+    {
+        url: 'assets/models/jupiter.gltf',
+        scale: '0.5 0.5 0.5',
+        name: 'Jupiter',
+    },
+    {
+        url: 'assets/models/saturn.gltf',
+        scale: '0.5 0.5 0.5',
+        name: 'Saturn',
+    },
+    {
+        url: 'assets/models/uranus.gltf',
+        scale: '0.5 0.5 0.5',
+        name: 'Uranus',
+    },
+    {
+        url: 'assets/models/neptune.gltf',
+        scale: '0.5 0.5 0.5',
+        name: 'Neptune',
     },
 ];
 
@@ -52,7 +77,7 @@ var setModel = function (model, entity) {
     entity.setAttribute('gltf-model', model.url);
 
     const div = document.querySelector('.instructions');
-    div.innerText = model.info;
+    div.innerText = model.name;
 };
 
 function renderPlaces(places) {
@@ -88,15 +113,6 @@ function renderPlaces(places) {
                 modelIndex--;
             }
             //modelIndex++;
-            var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], entity);
-        });
-
-
-        document.querySelector('button[data-action="change2"]').addEventListener('click', function () {
-            var entity = document.querySelector('[gps-entity-place]');
-           
-            modelIndex++;
             var newIndex = modelIndex % models.length;
             setModel(models[newIndex], entity);
         });
