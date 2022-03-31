@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = 'change';
+    button.innerText = '<';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -9,7 +9,7 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: 'Pokèmon',
+            name: 'Planets',
             location: {
                 // lat: <your-latitude>,
                 // lng: <your-longitude>,
@@ -61,7 +61,7 @@ function renderPlaces(places) {
         let longitude = place.location.lng;
 
         let model = document.createElement('a-entity');
-        //model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
 
         setModel(models[modelIndex], model);
 
@@ -92,5 +92,15 @@ function renderPlaces(places) {
         scene.appendChild(marker);    
         marker.appendChild(model);        
     });
+}
+
+function changeModel() {
+    var model = models[modelIndex];
+
+}
+
+function createScene() {
+    let scene = document.querySelector('a-scene');
+    let marker = document.querySelector('a-marker');
 }
 
