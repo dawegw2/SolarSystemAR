@@ -94,11 +94,11 @@ var setModel = function (model, entity, desc) {
     description.setAttribute('value', model.value) // set planet description
     description.setAttribute('position', model.position) // set text position 
 
-    if (desc == true) {
-        description.setAttribute('value', model.value)
-    } else {
-        description.setAttribute('value', '')
-    }
+    //if (desc == true) {
+       //description.setAttribute('value', model.value)
+    //} else {
+        //description.setAttribute('value', '')
+    //}
     const div = document.querySelector('.instructions');
     div.innerText = model.name;
 };
@@ -144,6 +144,7 @@ function renderPlaces(places) {
         marker.appendChild(model);        
     });
 
+    /*
     document.querySelector('button[class="hide"]').addEventListener('click', function () {
         if (modelDesc == true) {
             modelDesc = false;
@@ -151,8 +152,9 @@ function renderPlaces(places) {
             modelDesc = true; 
         }
         var newIndex = modelIndex % models.length;
-        setModel(models[newIndex], modelDesc);
+        setModel(models[newIndex], model, modelDesc);
     });
+    */
 }
 
 function changeModel() {
