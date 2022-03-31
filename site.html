@@ -13,9 +13,7 @@
     <body style='margin : 0px; overflow: hidden;'> 
         <div class="planet name"></div>
         
-        <a-scene vr-mode-ui="enabled: false"
-        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
-        renderer="antialias: true; alpha: true" touchEnabled="true"> 
+        <a-scene embedded arjs='sourceType: webcam;' touchEnabled="true"> 
             
             <a-assets>
                 <!-- textures from https://www.solarsystemscope.com/textures/-->
