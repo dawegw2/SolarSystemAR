@@ -1,4 +1,4 @@
-.centered{
+.planet{
     height: 20%;
     justify-content: center;
     position: fixed;
@@ -52,7 +52,7 @@ button {
     outline: none;
 }
 
-.instructions {
+.name {
     position: fixed;
     top: 5%;
     font-size: 1.25em;

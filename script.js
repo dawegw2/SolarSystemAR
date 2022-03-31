@@ -96,7 +96,7 @@ var setModel = function (model, entity, desc) {
     //} else {
         //description.setAttribute('value', '')
     //}
-    const div = document.querySelector('.instructions');
+    const div = document.querySelector('.name');
     div.innerText = model.name;
 };
 
