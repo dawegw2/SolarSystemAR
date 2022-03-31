@@ -5,9 +5,6 @@ window.onload = () => {
     //const button2 = document.querySelector('button[data-action="change2"]');
     //button2.innerText = '>';
 
-    const button_hide = document.querySelector('button[class="hide"]');
-    button_hide.innerText = 'hide';
-
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
