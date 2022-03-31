@@ -93,7 +93,7 @@ function renderPlaces(places) {
 
         setModel(models[modelIndex], model);
 
-        //model.setAttribute('animation-mixer', '');
+        model.setAttribute('animation-mixer', '');
 
         let anim = document.createElement('a-animation');
 
@@ -106,7 +106,7 @@ function renderPlaces(places) {
         model.appendChild(anim);
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('a-entity');
+            var entity = document.querySelector('animation-mixer');
            //if (modelIndex == 0) {
                 //modelIndex = 7;
             //} else {
