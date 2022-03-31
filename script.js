@@ -48,7 +48,7 @@ var setModel = function (model, entity) {
 
     entity.setAttribute('gltf-model', model.url);
 
-    const div = document.querySelector('.instructions');
+    const div = document.querySelector('.description');
     div.innerText = model.info;
 };
 
@@ -65,7 +65,7 @@ function renderPlaces(places) {
 
         setModel(models[modelIndex], model);
 
-        model.setAttribute('animation-mixer', '');
+        //model.setAttribute('animation-mixer', '');
 
         let anim = document.createElement('a-animation');
 
@@ -78,7 +78,7 @@ function renderPlaces(places) {
         model.appendChild(anim);
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('[gps-entity-place]');
+            var entity = document.querySelector('');
             if (modelIndex == 0) {
                 modelIndex = 3;
             } else {
