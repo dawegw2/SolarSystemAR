@@ -38,7 +38,7 @@ var models = [
         url: 'assets/models/earth.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Earth',
-        value: 'Earth is the third planet that orbits the Sun. ',
+        value: "Earth is the third planet that orbits the Sun and is the fifth largest planet in the solar system. It has liquid on its surface.",
     },
     {
         url: 'assets/models/mars.gltf',
@@ -50,26 +50,26 @@ var models = [
         url: 'assets/models/jupiter.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Jupiter',
-        value: 'wow',
+        value: 'The fifth planet from the Sun is Jupiter and the largest planet in the solar system. It is a gas giant with an atmosphere made up of hydrogen and helium that contain clouds of ammonia and water.',
     },
     {
         url: 'assets/models/saturn.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Saturn',
-        value: 'cool',
+        value: 'Saturn is the second largest planet and the sixth planet from the Sun. Saturn is another gaseous giant, famous for its large rings.',
         position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/uranus.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Uranus',
-        value: 'yes',
+        value: "Uranus is the seventh planet from the Sun. It's an ice giant four times larger than Earth with 13 known rings.",
     },
     {
         url: 'assets/models/neptune.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Neptune',
-        value: 'no',
+        value: 'Neptune is the furthest planet from the Sun. Like Uranus, Neptune is an ice giant that is dark and cold.',
     },
 ];
 
