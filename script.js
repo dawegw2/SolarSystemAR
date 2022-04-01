@@ -57,7 +57,7 @@ var models = [
         scale: '0.5 0.5 0.5',
         name: 'Saturn',
         value: 'Saturn is the second largest planet and the sixth planet from the Sun. Saturn is another gaseous giant, famous for its large rings.',
-        position: "-0.90 0 0.90",
+        textPosition: "-0.70 0 0.90",
     },
     {
         url: 'assets/models/uranus.gltf',
@@ -89,7 +89,7 @@ var setModel = function (model, entity, desc) {
     let description = document.querySelector('a-text')
 
     description.setAttribute('value', model.value) // set planet description
-    description.setAttribute('position', model.position) // set text position 
+    description.setAttribute('position', model.textPosition) // set text position 
 
     //if (desc == true) {
        //description.setAttribute('value', model.value)
