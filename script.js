@@ -162,11 +162,6 @@ function renderPlaces(places) {
     */
 }
 
-function myFunction() {
-    alert("hello");
-    //modelDesc = false;
-}   
-
 function changeModel() {
     var model = models[modelIndex];
 
