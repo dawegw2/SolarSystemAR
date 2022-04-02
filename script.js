@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '>';
+    button.innerText = 'O';
 
     //const button2 = document.querySelector('button[data-action="change2"]');
     //button2.innerText = '>';
@@ -94,7 +94,7 @@ var setModel = function (model, entity, desc) {
     let description = document.querySelector('a-text')
 
     description.setAttribute('value', model.value) // set planet description
-    description.setAttribute('position', model.textPosition) // set text position 
+    description.setAttribute('position', model.position) // set text position 
 
     //if (desc == true) {
        //description.setAttribute('value', model.value)
