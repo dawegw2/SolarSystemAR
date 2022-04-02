@@ -159,7 +159,7 @@ function load() {
 
 function myFunction() {
 
-    let entity = querySelector('a-entity')
+    let entity = document.querySelector('a-entity')
  
     modelIndex++;
     var newIndex = modelIndex % models.length;
