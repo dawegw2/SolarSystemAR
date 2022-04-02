@@ -94,7 +94,7 @@ var setModel = function (model, entity, desc) {
     
     let description = document.querySelector('a-text')
 
-    if (modelDesc) {
+    if (modelDesc == true) {
         description.setAttribute('value', model.value) // set planet description
         description.setAttribute('position', model.position) // set text position 
     } else {
@@ -164,7 +164,7 @@ function renderPlaces(places) {
 
 function myFunction() {
     alert("hello");
-    modelDesc = false;
+    //modelDesc = false;
 }   
 
 function changeModel() {
