@@ -45,7 +45,7 @@ button {
     outline: none;
 }
 
-.yo{
+.yo {
     height: 20%;
     justify-content: center;
     position: fixed;
@@ -54,6 +54,6 @@ button {
     flex-direction: row;
     width: 100%;
     margin: 1px auto;
-    left: 50px;
-    right: 50px;
+    left: 80px;
+    right: 80px;
 }
