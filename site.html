@@ -15,6 +15,21 @@
         
         <a-scene embedded arjs='sourceType: webcam;'> 
 
+            <a-assets>
+                <!-- textures from https://www.solarsystemscope.com/textures/-->
+                <a-asset-item id="mars-planet" src="assets/models/mars.obj"></a-asset-item>
+                <a-asset-item id="mars-mtl" src="assets/models/mars.mtl"></a-asset-item>
+               
+                <a-asset-item id="mercury" src="assets/models/mercury.gltf"></a-asset-item>
+                <a-asset-item id="venus" src="assets/models/venus.gltf"></a-asset-item>
+                <a-asset-item id="earth" src="assets/models/earth.gltf"></a-asset-item>
+                <a-asset-item id="mars" src="assets/models/mars.gltf"></a-asset-item>
+                <a-asset-item id="jupiter" src="assets/models/jupiter.gltf"></a-asset-item>
+                <a-asset-item id="saturn" src="assets/models/saturn.gltf"></a-asset-item>
+                <a-asset-item id="uranus" src="assets/models/uranus.gltf"></a-asset-item>
+                <a-asset-item id="neptune" src="assets/models/neptune.gltf"></a-asset-item>
+            </a-assets>
+
             <a-marker type="pattern" url="assets/markers/pattern-mars-symbol.patt">
 
                 <a-text id="desc" width="2" height="2" value="Mars is a dusty, cold, desert world with a very thin atmosphere. It's the fourth planet from the Sun" color="orange" position="-0.90 0 1.2" rotation="-90 0 0"></a-text>
