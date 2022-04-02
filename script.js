@@ -9,9 +9,6 @@ window.onload = () => {
     renderPlaces(places);
 };
 
-function myFunction() {
-    alert("hello");
-}
 
 function staticLoadPlaces() {
     return [
@@ -97,8 +94,13 @@ var setModel = function (model, entity, desc) {
     
     let description = document.querySelector('a-text')
 
-    description.setAttribute('value', model.value) // set planet description
-    description.setAttribute('position', model.position) // set text position 
+    if (modelDesc) {
+        description.setAttribute('value', model.value) // set planet description
+        description.setAttribute('position', model.position) // set text position 
+    } else {
+        description.setAttribute('value', '')
+    }
+    
 
     //if (desc == true) {
        //description.setAttribute('value', model.value)
@@ -159,6 +161,11 @@ function renderPlaces(places) {
     });
     */
 }
+
+function myFunction() {
+    alert("hello");
+    modelDesc = false;
+}   
 
 function changeModel() {
     var model = models[modelIndex];
