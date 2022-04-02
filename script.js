@@ -132,26 +132,6 @@ function renderPlaces(places) {
     });
 }
 
-function myFunction() {
- 
-    modelIndex++;
-    var newIndex = modelIndex % models.length;
-
-    entity.setAttribute('scale', models[newIndex].scale);
-   
-
-    entity.setAttribute('gltf-model', models[newIndex].url);
-    
-    let description = document.querySelector('a-text')
-
-    description.setAttribute('value', models[newIndex].value) // set planet description
-    description.setAttribute('position', models[newIndex].position) // set text position 
-  
-    const div = document.querySelector('.name');
-    div.innerText = models[newIndex].name;
-
-}
-
 function load() {
     let scene = document.querySelector('a-scene');
     let marker = document.querySelector('a-marker');
@@ -176,4 +156,25 @@ function load() {
     scene.appendChild(marker);    
     marker.appendChild(model);        
 }
+
+function myFunction() {
+
+    let entity = querySelector('a-entity')
+ 
+    modelIndex++;
+    var newIndex = modelIndex % models.length;
+
+    entity.setAttribute('gltf-model', models[newIndex].url);
+    entity.setAttribute('scale', models[newIndex].scale);
+
+    let description = document.querySelector('a-text')
+
+    description.setAttribute('value', models[newIndex].value) // set planet description
+    description.setAttribute('position', models[newIndex].position) // set text position 
+  
+    const div = document.querySelector('.name');
+    div.innerText = models[newIndex].name;
+
+}
+
 
