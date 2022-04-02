@@ -14,8 +14,6 @@ function staticLoadPlaces() {
         {
             name: 'Planets',
             location: {
-                // lat: <your-latitude>,
-                // lng: <your-longitude>,
             },
         },
     ];
@@ -103,13 +101,14 @@ var setModel = function (model, entity, desc) {
     //} else {
         //description.setAttribute('value', '')
     //}
+    //change planet name
     const div = document.querySelector('.name');
     div.innerText = model.name;
 };
 
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
-    let marker = document.querySelector('a-marker')
+    let marker = document.querySelector('a-marker');
 
     places.forEach(() => {
         let model = document.createElement('a-entity');
@@ -118,15 +117,16 @@ function renderPlaces(places) {
 
         model.setAttribute('animation-mixer', '');
 
-        let anim = document.createElement('a-animation');
+        let anim = document.createElement('a-animation'); //create animation element
 
+        //set rotation animation settings
         anim.setAttribute('attribute', 'rotation');
         anim.setAttribute('dur', '10000');
         anim.setAttribute('to', '0 360 0');
         anim.setAttribute('repeat', 'indefinite');
         anim.setAttribute('easing', 'linear');
 
-        model.appendChild(anim);
+        model.appendChild(anim); // adds the animation element within the entity/model element
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
            //if (modelIndex == 0) {

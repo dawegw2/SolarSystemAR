@@ -27,7 +27,7 @@
     width: 100%;
     margin: 1px auto;
     left: 0px;
-    right: 0x;
+    right: 0px;
 }
 
 button {
@@ -39,8 +39,8 @@ button {
     width: 2em;
     height: 2em;
     border-radius: 100%;
-    font-size: 2em;
-    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     outline: none;
 }
