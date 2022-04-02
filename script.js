@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = 'O';
+    button.innerText = '->';
 
     //const button2 = document.querySelector('button[data-action="change2"]');
     //button2.innerText = '>';
