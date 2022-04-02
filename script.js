@@ -133,9 +133,8 @@ function renderPlaces(places) {
 }
 
 function myFunction() {
-
+ 
     modelIndex++;
-    consolelog(modelIndex);
     var newIndex = modelIndex % models.length;
 
     entity.setAttribute('scale', models[newIndex].scale);
