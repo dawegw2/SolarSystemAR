@@ -2,11 +2,12 @@ window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '>';
 
-    const button2 = document.getElementsByClassName('click');
-    button2.innerText = 'o';
+    //const button2 = document.getElementsByClassName('click');
+   // button2.innerText = 'o';
 
     let places = staticLoadPlaces();
-    renderPlaces(places);
+    //renderPlaces(places);
+    load();
 };
 
 
@@ -81,33 +82,18 @@ var models = [
 
 var modelIndex = 0;
 var modelDesc = true;
-var setModel = function (model, entity, desc) {
+var setModel = function (model, entity) {
     if (model.scale) {
         entity.setAttribute('scale', model.scale);
     }
-
-    //if (model.position) {
-        //entity.setAttribute('position', model.position);
-    //}
 
     entity.setAttribute('gltf-model', model.url);
     
     let description = document.querySelector('a-text')
 
-    if (modelDesc == true) {
-        description.setAttribute('value', model.value) // set planet description
-        description.setAttribute('position', model.position) // set text position 
-    } else {
-        description.setAttribute('value', '')
-    }
-    
-
-    //if (desc == true) {
-       //description.setAttribute('value', model.value)
-    //} else {
-        //description.setAttribute('value', '')
-    //}
-    //change planet name
+    description.setAttribute('value', model.value) // set planet description
+    description.setAttribute('position', model.position) // set text position 
+  
     const div = document.querySelector('.name');
     div.innerText = model.name;
 };
@@ -135,11 +121,7 @@ function renderPlaces(places) {
         model.appendChild(anim); // adds the animation element within the entity/model element
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-           //if (modelIndex == 0) {
-                //modelIndex = 7;
-            //} else {
-              //  modelIndex--;
-            //}
+         
             modelIndex++;
             var newIndex = modelIndex % models.length;
             setModel(models[newIndex], model);
@@ -148,32 +130,51 @@ function renderPlaces(places) {
         scene.appendChild(marker);    
         marker.appendChild(model);        
     });
-
-    /*
-    document.querySelector('button[class="hide"]').addEventListener('click', function () {
-        if (modelDesc == true) {
-            modelDesc = false;
-        } else {
-            modelDesc = true; 
-        }
-        var newIndex = modelIndex % models.length;
-        setModel(models[newIndex], model, modelDesc);
-    });
-    */
 }
 
+function myFunction() {
 
-document.getElementsByClassName('click').addEventListener('click', function () {
-    modelDesc = false;
-});
+    modelIndex++;
+    consolelog(modelIndex);
+    var newIndex = modelIndex % models.length;
 
-function changeModel() {
-    var model = models[modelIndex];
+    entity.setAttribute('scale', models[newIndex].scale);
+   
+
+    entity.setAttribute('gltf-model', models[newIndex].url);
+    
+    let description = document.querySelector('a-text')
+
+    description.setAttribute('value', models[newIndex].value) // set planet description
+    description.setAttribute('position', models[newIndex].position) // set text position 
+  
+    const div = document.querySelector('.name');
+    div.innerText = models[newIndex].name;
 
 }
 
-function createScene() {
+function load() {
     let scene = document.querySelector('a-scene');
     let marker = document.querySelector('a-marker');
+
+    let model = document.createElement('a-entity');
+
+    let anim = document.createElement('a-animation'); //create animation element
+
+    //set rotation animation settings
+    anim.setAttribute('attribute', 'rotation');
+    anim.setAttribute('dur', '10000');
+    anim.setAttribute('to', '0 360 0');
+    anim.setAttribute('repeat', 'indefinite');
+    anim.setAttribute('easing', 'linear');
+
+    model.appendChild(anim); // adds the animation element within the entity/model element
+
+    document.querySelector('button[data-action="change"]').addEventListener('click', function () {
+        
+    });
+
+    scene.appendChild(marker);    
+    marker.appendChild(model);        
 }
 
