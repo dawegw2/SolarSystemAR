@@ -9,6 +9,10 @@ window.onload = () => {
     renderPlaces(places);
 };
 
+function myFunction() {
+    alert("hello");
+}
+
 function staticLoadPlaces() {
     return [
         {
