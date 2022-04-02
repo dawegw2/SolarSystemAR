@@ -27,49 +27,56 @@ var models = [
         scale: '0.5 0.5 0.5',
         name: 'Mercury',
         value: "Mercury is the closest planet from the Sun and the smallest planet in our solar system. It's a rocky planet with a solid surface and a thin atmosphere.",
+        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/venus.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Venus',
         value: 'Venus is the second closest planet from the Sun. It has a toxic atmosphere and a very hot surface.',
+        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/earth.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Earth',
         value: "Earth is the third planet that orbits the Sun and is the fifth largest planet in the solar system. It has liquid on its surface.",
+        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/mars.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Mars',
         value: "Mars is the fourth planet from the Sun. It's a dusty, cold, desert world with a very thin atmosphere. ",
+        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/jupiter.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Jupiter',
         value: 'The fifth planet from the Sun is Jupiter and the largest planet in the solar system. It is a gas giant with an atmosphere made up of hydrogen and helium that contain clouds of ammonia and water.',
+        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/saturn.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Saturn',
         value: 'Saturn is the second largest planet and the sixth planet from the Sun. Saturn is another gaseous giant, famous for its large rings.',
-        //textPosition: "-0.90 0 0.90",
+        position: "-0.90 0 1.2",
     },
     {
         url: 'assets/models/uranus.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Uranus',
         value: "Uranus is the seventh planet from the Sun. It's an ice giant four times larger than Earth with 13 known rings.",
+        position: "-0.90 0 0.90",
     },
     {
         url: 'assets/models/neptune.gltf',
         scale: '0.5 0.5 0.5',
         name: 'Neptune',
         value: 'Neptune is the furthest planet from the Sun. Like Uranus, Neptune is an ice giant that is dark and cold.',
+        position: "-0.90 0 0.90",
     },
 ];
 
@@ -89,7 +96,7 @@ var setModel = function (model, entity, desc) {
     let description = document.querySelector('a-text')
 
     description.setAttribute('value', model.value) // set planet description
-    //description.setAttribute('position', model.textPosition) // set text position 
+    description.setAttribute('position', model.textPosition) // set text position 
 
     //if (desc == true) {
        //description.setAttribute('value', model.value)
