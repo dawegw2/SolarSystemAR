@@ -1,9 +1,9 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '->';
+    button.innerText = '>';
 
-    //const button2 = document.querySelector('button[data-action="change2"]');
-    //button2.innerText = '>';
+    const button2 = document.getElementsByClassName('click');
+    button2.innerText = 'o';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -161,6 +161,11 @@ function renderPlaces(places) {
     });
     */
 }
+
+
+document.getElementsByClassName('click').addEventListener('click', function () {
+    modelDesc = false;
+});
 
 function changeModel() {
     var model = models[modelIndex];
