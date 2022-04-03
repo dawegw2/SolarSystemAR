@@ -71,22 +71,6 @@ var models = [
 
 var modelIndex = 0;
 var modelDesc = true;
-var setModel = function (model, entity) {
-    if (model.scale) {
-        entity.setAttribute('scale', model.scale);
-    }
-
-    entity.setAttribute('gltf-model', model.url);
-    
-    let description = document.querySelector('a-text')
-
-    description.setAttribute('value', model.value) // set planet description
-    description.setAttribute('position', model.position) // set text position 
-  
-    const div = document.querySelector('.name');
-    div.innerText = model.name;
-};
-
 
 function load() {
     let scene = document.querySelector('a-scene');
@@ -106,10 +90,6 @@ function load() {
     anim.setAttribute('easing', 'linear');
 
     model.appendChild(anim); // adds the animation element within the entity/model element
-
-    document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-        
-    });
 
     scene.appendChild(marker);    
     marker.appendChild(model);        
