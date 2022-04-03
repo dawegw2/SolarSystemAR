@@ -87,32 +87,6 @@ var setModel = function (model, entity) {
     div.innerText = model.name;
 };
 
-function renderPlaces(places) {
-    let scene = document.querySelector('a-scene');
-    let marker = document.querySelector('a-marker');
-
-    places.forEach(() => {
-        let model = document.createElement('a-entity');
-
-        setModel(models[modelIndex], model);
-
-        model.setAttribute('animation-mixer', '');
-
-        let anim = document.createElement('a-animation'); //create animation element
-
-        //set rotation animation settings
-        anim.setAttribute('attribute', 'rotation');
-        anim.setAttribute('dur', '10000');
-        anim.setAttribute('to', '0 360 0');
-        anim.setAttribute('repeat', 'indefinite');
-        anim.setAttribute('easing', 'linear');
-
-        model.appendChild(anim); // adds the animation element within the entity/model element
-
-        scene.appendChild(marker);    
-        marker.appendChild(model);        
-    });
-}
 
 function load() {
     let scene = document.querySelector('a-scene');

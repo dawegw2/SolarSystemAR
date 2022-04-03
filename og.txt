@@ -103,6 +103,7 @@ var setModel = function (model, entity) {
     div.innerText = model.name;
 };
 
+
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
     let marker = document.querySelector('a-marker');
