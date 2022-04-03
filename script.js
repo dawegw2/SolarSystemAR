@@ -7,7 +7,8 @@ window.onload = () => {
 
     //let places = staticLoadPlaces();
     //renderPlaces(places);
-    load();
+    setScene();
+    changePlanet();
 };
 
 var models = [
@@ -72,7 +73,7 @@ var models = [
 var modelIndex = 0;
 var modelDesc = true;
 
-function load() {
+function setScene() {
     let scene = document.querySelector('a-scene');
     let marker = document.querySelector('a-marker');
 
@@ -93,11 +94,9 @@ function load() {
 
     scene.appendChild(marker);    
     marker.appendChild(model);    
-    
-    myFunction();
 }
 
-function myFunction() {
+function changePlanet() {
 
     let entity = document.querySelector('#planet');
  
