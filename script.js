@@ -138,6 +138,8 @@ function load() {
 
     let model = document.createElement('a-entity');
 
+    model.setAttribute('id', 'planet');
+
     let anim = document.createElement('a-animation'); //create animation element
 
     //set rotation animation settings
@@ -159,7 +161,7 @@ function load() {
 
 function myFunction() {
 
-    let entity = document.querySelector('a-entity')
+    let entity = document.querySelector('#planet');
  
     modelIndex++;
     var newIndex = modelIndex % models.length;
