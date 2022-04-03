@@ -2,11 +2,6 @@ window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '>';
 
-    //const button2 = document.getElementsByClassName('click');
-   // button2.innerText = 'o';
-
-    //let places = staticLoadPlaces();
-    //renderPlaces(places);
     setScene();
     changePlanet();
 };
@@ -114,7 +109,6 @@ function changePlanet() {
     div.innerText = models[newIndex].name;
 
     modelIndex++;
-
 }
 
 
