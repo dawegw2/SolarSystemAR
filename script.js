@@ -109,13 +109,6 @@ function renderPlaces(places) {
 
         model.appendChild(anim); // adds the animation element within the entity/model element
 
-        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-         
-            modelIndex++;
-            var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], model);
-        });
-
         scene.appendChild(marker);    
         marker.appendChild(model);        
     });
