@@ -99,8 +99,7 @@ function setScene() {
 function changePlanet() {
 
     let entity = document.querySelector('#planet');
- 
-    modelIndex++;
+
     var newIndex = modelIndex % models.length;
 
     entity.setAttribute('gltf-model', models[newIndex].url);
@@ -113,6 +112,8 @@ function changePlanet() {
   
     const div = document.querySelector('.name');
     div.innerText = models[newIndex].name;
+
+    modelIndex++;
 
 }
 
