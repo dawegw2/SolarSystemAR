@@ -92,7 +92,9 @@ function load() {
     model.appendChild(anim); // adds the animation element within the entity/model element
 
     scene.appendChild(marker);    
-    marker.appendChild(model);        
+    marker.appendChild(model);    
+    
+    myFunction();
 }
 
 function myFunction() {
