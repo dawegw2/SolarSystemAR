@@ -10,17 +10,6 @@ window.onload = () => {
     load();
 };
 
-
-function staticLoadPlaces() {
-    return [
-        {
-            name: 'Planets',
-            location: {
-            },
-        },
-    ];
-}
-
 var models = [
     {
         url: 'assets/models/mercury.gltf',
@@ -82,55 +71,7 @@ var models = [
 
 var modelIndex = 0;
 var modelDesc = true;
-var setModel = function (model, entity) {
-    if (model.scale) {
-        entity.setAttribute('scale', model.scale);
-    }
 
-    entity.setAttribute('gltf-model', model.url);
-    
-    let description = document.querySelector('a-text')
-
-    description.setAttribute('value', model.value) // set planet description
-    description.setAttribute('position', model.position) // set text position 
-  
-    const div = document.querySelector('.name');
-    div.innerText = model.name;
-};
-
-function renderPlaces(places) {
-    let scene = document.querySelector('a-scene');
-    let marker = document.querySelector('a-marker');
-
-    places.forEach(() => {
-        let model = document.createElement('a-entity');
-
-        setModel(models[modelIndex], model);
-
-        model.setAttribute('animation-mixer', '');
-
-        let anim = document.createElement('a-animation'); //create animation element
-
-        //set rotation animation settings
-        anim.setAttribute('attribute', 'rotation');
-        anim.setAttribute('dur', '10000');
-        anim.setAttribute('to', '0 360 0');
-        anim.setAttribute('repeat', 'indefinite');
-        anim.setAttribute('easing', 'linear');
-
-        model.appendChild(anim); // adds the animation element within the entity/model element
-
-        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-         
-            modelIndex++;
-            var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], model);
-        });
-
-        scene.appendChild(marker);    
-        marker.appendChild(model);        
-    });
-}
 
 function load() {
     let scene = document.querySelector('a-scene');
