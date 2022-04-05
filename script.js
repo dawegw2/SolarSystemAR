@@ -1,9 +1,11 @@
 window.onload = () => {
-    const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '>';
+    
 
     const button2 = document.getElementById('hidedesc');
     button2.innerText = 'hide';
+
+    const button = document.querySelector('button[data-action="change"]');
+    button.innerText = '>';
 
     setScene();
     changePlanet();
