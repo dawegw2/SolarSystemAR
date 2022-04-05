@@ -17,9 +17,6 @@
 
             <a-assets>
                 <!-- textures from https://www.solarsystemscope.com/textures/-->
-                <a-asset-item id="mars-planet" src="assets/models/mars.obj"></a-asset-item>
-                <a-asset-item id="mars-mtl" src="assets/models/mars.mtl"></a-asset-item>
-               
                 <a-asset-item id="mercury" src="assets/models/mercury.gltf"></a-asset-item>
                 <a-asset-item id="venus" src="assets/models/venus.gltf"></a-asset-item>
                 <a-asset-item id="earth" src="assets/models/earth.gltf"></a-asset-item>
@@ -43,7 +40,7 @@
             <button onclick="changePlanet()" data-action="change"></button>
         </div>
         <div class="hide">
-            <button onclick="hideDescription()" data-action="change"></button>
+            <button id='hide' onclick="hideDescription()" data-action="change"></button>
         </div>
 
       

@@ -2,6 +2,9 @@ window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '>';
 
+    const button2 = document.getElementById('hide');
+    button2.innerText = 'hide';
+
     setScene();
     changePlanet();
 };
@@ -96,19 +99,33 @@ function changePlanet() {
     let entity = document.querySelector('#planet');
 
     var newIndex = modelIndex % models.length;
-
+   
     entity.setAttribute('gltf-model', models[newIndex].url);
     entity.setAttribute('scale', models[newIndex].scale);
 
     let description = document.querySelector('a-text')
 
-    description.setAttribute('value', models[newIndex].value) // set planet description
+    if (modelDesc == true) {
+        description.setAttribute('value', models[newIndex].value) // set planet description   
+    } else {
+        description.setAttribute('value', '')
+    }
+   
     description.setAttribute('position', models[newIndex].position) // set text position 
   
     const div = document.querySelector('.name');
     div.innerText = models[newIndex].name;
 
     modelIndex++;
+}
+
+function hideDescription() {
+    if (modelDesc == true) {
+        modelDesc = false;
+    } else {
+        modelDesc = true;
+    }
+
 }
 
 
