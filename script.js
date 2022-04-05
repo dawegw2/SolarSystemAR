@@ -125,9 +125,6 @@ function hideDescription() {
     } else {
         modelDesc = true;
     }
-
-    changePlanet() 
-
 }
 
 
