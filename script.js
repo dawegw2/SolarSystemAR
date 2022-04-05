@@ -126,6 +126,8 @@ function hideDescription() {
         modelDesc = true;
     }
 
+    changePlanet() 
+
 }
 
 
