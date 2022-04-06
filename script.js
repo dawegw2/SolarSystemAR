@@ -121,6 +121,20 @@ function hideDescription() {
     } else {
         modelDesc = true;
     }
+
+    let entity = document.querySelector('#planet');
+   
+    entity.setAttribute('gltf-model', models[modelIndex].url);
+    entity.setAttribute('scale', models[modelIndex].scale);
+
+    let description = document.querySelector('a-text')
+
+    description.setAttribute('value', '')   
+    description.setAttribute('position', models[modelIndex].position) // set text position 
+  
+    const div = document.querySelector('.name');
+    div.innerText = models[modelIndex].name;
+
 }
 
 
