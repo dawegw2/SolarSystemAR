@@ -116,15 +116,14 @@ function changePlanet() {
 }
 
 function hideDescription() {
+    let description = document.querySelector('a-text')
     if (modelDesc == true) {
         modelDesc = false;
+        description.setAttribute('value', '')   
     } else {
         modelDesc = true;
+        description.setAttribute('value', models[modelIndex].value)
     }
-
-    let entity = document.querySelector('#planet');
-    let description = document.querySelector('a-text')
-    description.setAttribute('value', '')   
 }
 
 
