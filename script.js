@@ -122,7 +122,7 @@ function hideDescription() {
         description.setAttribute('value', '')   
     } else {
         modelDesc = true;
-        description.setAttribute('value', models[modelIndex].value)
+        description.setAttribute('value', models[modelIndex-1].value)
     }
 }
 
