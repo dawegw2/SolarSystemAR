@@ -3,7 +3,7 @@ window.onload = () => {
     changePlanet();
 };
 
-var models = [
+var models = [ //array of the planets and their attributes
     {
         url: 'assets/models/mercury.gltf',
         scale: '0.5 0.5 0.5',
@@ -65,7 +65,7 @@ var models = [
 var modelIndex = 0;
 var modelDesc = true;
 
-function setScene() {
+function setScene() { //screates the initial scene
     let scene = document.querySelector('a-scene');
     let marker = document.querySelector('a-marker');
 
@@ -88,7 +88,7 @@ function setScene() {
     marker.appendChild(model);    
 }
 
-function changePlanet() {
+function changePlanet() { //swaps through the different planets
 
     let entity = document.querySelector('#planet');
 
@@ -113,7 +113,7 @@ function changePlanet() {
     modelIndex++;
 }
 
-function hideDescription() {
+function hideDescription() { //hides/shows planet description
     let description = document.querySelector('a-text')
     if (modelDesc == true) {
         modelDesc = false;
