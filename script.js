@@ -4,6 +4,13 @@ window.onload = () => {
 };
 
 var models = [ //array of the planets and their attributes
+    {    
+        url: 'assets/models/sun.gltf',
+        scale: '0.5 0.5 0.5',
+        name: 'The Sun is the center of our solar system. From planets to astroids, everything in our solar system revolves around the Sun. Being the only star in our solar system, the Sun is an important source for life on Earth.',
+        value: "The Sun, a giant star",
+        position: "-0.90 0 0.90",
+    },
     {
         url: 'assets/models/mercury.gltf',
         scale: '0.5 0.5 0.5',
