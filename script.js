@@ -61,7 +61,7 @@ var models = [ //array of the planets and their attributes
         position: "-0.90 0 0.90",
     },
     {
-        url: 'assets/models/neptune.gltf',
+        url: 'assets/models/Neptune.glb',
         scale: '0.5 0.5 0.5',
         name: 'Neptune',
         value: 'Neptune is the furthest planet from the Sun. Like Uranus, Neptune is an ice giant that is dark and cold.',
