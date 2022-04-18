@@ -128,7 +128,7 @@ function hideDescription() { //hides/shows planet description
         description.setAttribute('value', '')   
     } else {
         modelDesc = true;
-        description.setAttribute('value', models[newIndex-1].value)
+        description.setAttribute('value', models[newIndex].value)
     }
 }
 
